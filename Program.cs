@@ -19,7 +19,9 @@ namespace WishShop
             string wishText = Console.ReadLine();
             while (!string.IsNullOrWhiteSpace(wishText))
             {
-                Wish aWish = new Wish(wishText);
+                DiscountWish aWish = new DiscountWish(wishText);
+
+                aWish.IncreaseSuccessPercentage();
                 if (aWish.MakeWish(aUser))
                 {
                     Console.WriteLine("Yay!");
